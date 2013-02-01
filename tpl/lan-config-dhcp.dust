@@ -1,0 +1,34 @@
+<div class="span10" id="dhcpIP">
+	<label class="checkbox inline" for="enableDHCP"> {@eq key=dhcp.enabled value="true"}true{/eq}
+		<input type="checkbox" {?dhcp.enabled}checked="checked"{/dhcp.enabled}/>
+		Enable DHCP Server </label>
+	<button title="Add IP Range" class="btn btn-primary pull-right addRange" id="addRange">
+		Add Range
+	</button>
+</div>
+<div class="span10" id="dhcpRanges">
+	<table class="ipRanges">
+		{#dhcp.ranges}
+		<tr>
+			<td>
+			<table>
+				<tr>
+					<td><label class="control-label inline">IP Range</label></td>
+					<td>
+					<input type="text" maxlength="32" name="from" class="input-medium" value="{from}" disabled />
+					-
+					<input type="text" maxlength="32" name="to"  class="input-medium" value="{to}" disabled />
+					</td>
+					<td>
+					<button title="Save Range" class="btn btn-primary deleteRange">
+						Delete
+					</button>
+					</td>
+				</tr>
+			</table>
+		</td>
+		</tr>
+		{/dhcp.ranges}
+	</table>
+
+</div>

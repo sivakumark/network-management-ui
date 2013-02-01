@@ -1,0 +1,21 @@
+<div class="itemborder">
+	<div class="span10 subHead">
+		<div>
+			VLAN
+		</div>
+	</div>
+	<div>
+		<table>
+			<tr>
+				<td width="20%"> VLAN ID </td>
+				<td width="20%">
+				<input type="text" class="input-medium" disabled value="{id}"/>
+				</th> <td width="60%"> (VLAN number needs to be less or equal to 4098) </td>
+			</tr>
+		</table>
+	</div>
+	<br>
+	<div id="vlanConfigType"></div>
+</div>
+<div class="subHead row-fluid" class="select-config-type"></div>
+<div id="configscreen"></div>

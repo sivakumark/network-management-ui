@@ -1,0 +1,26 @@
+<div class="itemborder">
+	<div class="itemHead row-fluid">
+		<div class="span10">
+			<div class="subHead">
+				<b>{name}{#config} {type}{/config}</b>
+			</div>
+		</div>
+		<div class="span10">
+			{>select-config-type/}
+			{@if cond="'{config.type}'=='dhcp'"}
+			<div class="span10 itemborder dhcpView">
+				{>lan-config-dhcp/}
+			</div>
+			{:else}
+			<div class="span10 staticView">
+				{>lan-config-static/}
+			</div>
+			{/if}
+		</div>
+		{#vlaninterfaces.config}
+		<div class="span10">
+			{>vlan-view-details" vlan={.}/}
+		</div>
+		{/vlaninterfaces.config}
+	</div>
+</div>

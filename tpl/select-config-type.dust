@@ -1,0 +1,10 @@
+<div class="span10">
+	<b>Selected Configuration Type</b> <h1>{type}</h1>
+	<label class="radio inline">
+		<input type="radio" name="configType{id}" value="static" {@eq key=config.type value="static"} checked="checked"{/eq}>
+		Manual</label>
+	<label class="radio inline">
+		<input type="radio" name="configType{id}" value="dhcp" {@eq key=config.type value="dhcp"} checked="checked"{/eq}>
+		Dhcp
+		</label>
+</div>

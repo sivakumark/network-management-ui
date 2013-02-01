@@ -1,0 +1,20 @@
+<td>
+<form id="ipRangeForm">
+	<table>
+		<tr>
+			<td><label class="control-label inline" for="form1">IP Range</label></td>
+			<td>
+			<input type="text" maxlength="32" name="from" id="from" class="input-medium" value="{from}"/>
+			-
+			<input type="text" maxlength="32" name="to" id="to" class="input-medium" value="{to}"/>
+			</td>
+			<td>
+			<button title="Save Range" class="btn btn-primary saveRange" id="saveRange">
+				Save
+			</button>
+			<button title="Cancel Range" class="btn cancelRange" id="cancelRange">
+				Cancel
+			</button></td>
+		</tr>
+	</table>
+</form></td>

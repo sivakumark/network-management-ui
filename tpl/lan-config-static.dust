@@ -1,0 +1,41 @@
+<div class="itemborder">
+	<button title="Add IP Range" class="btn btn-primary pull-right addStaticIP" id="addStaticIP">
+		Add Static IP
+	</button>
+	<div id="lan-range-view">
+		<table id="lan-static-ip">
+			<tr>
+				<td><label class="control-label" for="inputHost">Network Host</label></td>
+				<td>
+				<input type="text" id="inputHost" class="input-medium"  placeholder="xxx.xxx.xxx.xxx" disabled value="{networkhost}">
+				</td>
+			</tr>
+			<tr>
+				<td><label class="control-label" for="inputNetmask">Netmask</label></td>
+				<td>
+				<input type="text" id="inputNetmask"  class="input-medium" placeholder="xxx.xxx.xxx.xxx" disabled value="{subnetmask}">
+				</td>
+			</tr>
+			<tr>
+				<td><label class="control-label" for="inputGateway">Gateway</label></td>
+				<td>
+				<input type="text" id="inputGateway"  class="input-medium" placeholder="xxx.xxx.xxx.xxx" disabled value="{gateway}">
+				</td>
+			</tr>
+			<tr>
+				<td><label class="control-label" for="inputNetmask">Share VPN</label></td>
+				<td>
+				<input type="checkbox" id="inputShareVPN" disabled>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2">
+					<button title="Change IP address" class="btn btn-primary pull-left editStaticIP">
+						Edit
+					</button>
+				</td>
+			</tr>
+		</table>
+	</div>
+</div>
+

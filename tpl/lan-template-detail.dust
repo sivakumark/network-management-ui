@@ -1,0 +1,31 @@
+<div class="itemborder">
+	<div class="itemHead row-fluid">
+		<div class="span10">
+			<div class="subHead">
+				<b>{name}{#config} {type}{/config}</b>
+			</div>
+			<!--
+			<button title="Edit LAN Details" class="btn btn-primary pull-right edit" id="editLan">Edit</button>
+			<button title="Save LAN Details" class="hide btn btn-primary pull-right save" id="saveLan">Save</button>
+			<button title="Cancel LAN Details" class="hide btn btn-primary pull-right cancel" id="cancelLan">Cancel</button>
+			-->
+		</div>
+	</div>
+	<div class="subHead row-fluid" id="selectConfigType"></div>
+	<br>
+	<br>
+	{#config param=dhcp}
+		<div class="span10"> {>select-config-type type=type/}</div>
+		{@select key="{type}"}
+			 {@eq value="dhcp"}
+			 	<div class="span10"> {>lan-config-dhcp/}</div>			 		
+			 {/eq}
+			 {@eq value="static"}
+			  	<div class="span10">{>lan-config-static /}</div>
+			 {/eq}
+		{/select}
+	{/config}
+	<div id="lanConfigType"></div>
+	<br>
+	<div class="table" id="vlanDetails"></div>
+</div>

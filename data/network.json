@@ -1,0 +1,86 @@
+[
+	{
+		"name": "LAN0",
+		"id": "id",
+		"config": {
+			"type": "dhcp",
+			"ipaddress": null,
+			"subnetmask": null,
+			"gateway": null,
+			"boradcase": null
+		},
+		"dhcp": {
+			"enabled": true,
+			"ranges": [
+				{
+					"from": "10.10.10.1",
+					"to": "10.10.10.11"
+				}, {
+					"from": "10.10.10.11",
+					"to": "10.10.10.22"
+				}
+			]
+		},
+		"staticiproute": [
+			{
+				"networkhost": "192.168.12.90",
+				"subnetmask": "255.255.255.0",
+				"gateway": "192.168.12.1",
+				"sharevpn": true
+			}
+		],
+		"vlaninterfaces": [
+			{
+				"id": "25",
+				"config": [
+					{
+						"type": "dhcp",
+						"ipaddress": null,
+						"subnetmask": null,
+						"gateway": null,
+						"broadcast": null
+					}
+				],
+				"dhcp": {
+					"enabled": false,
+					"ranges": []
+				},
+				"staticiproute": [
+					{
+						"networkhost": "subnetmask",
+						"gateway": "sharevpn"
+					}
+				]
+			}, {
+				"id": 2,
+				"config": {
+					"type": "static",
+					"ipaddress": "xxx.xxx.xxx.xxx",
+					"subnetmask": "xxx.xxx.xxx.xxx",
+					"gateway": "xxx.xxx.xxx.xxx",
+					"broadcast": "xxx.xxx.xxx.xxx"
+				}
+				,
+				"dhcp": {
+					"enabled": false,
+					"ranges": [
+						{
+							"from": "xxx.xxx.xxx.xxx",
+							"to": "xxx.xxx.xxx.xxx"
+						}, {
+							"from": "xxx.xxx.xxx.xxx",
+							"to": "xxx.xxx.xxx.xxx"
+						}
+					],
+					"staticiproute": [
+						{
+						}
+					]
+				}
+			}
+		]
+	}, {
+		"basename": "WAN0",
+		"baseid": "id"
+	}
+]
